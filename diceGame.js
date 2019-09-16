@@ -16,23 +16,39 @@ function displayRules(rules){
 	return
 }
 
-//rock, paper, scissors function
-	//choose rock, paper, scissors
-function playRockPaperScissors(rockPaperScissors){
-	rockPaperScissors = prompt("Rock, paper, or scissors?");
-	rockPaperScissors = rockPaperScissors.toLowerCase();
-	console.log(rockPaperScissors);
-}
-
-
-
 function rollDice(maxSides){
 	return Math.floor(Math.random() * maxSides) + 1;
 }
 
 
+//rock, paper, scissors function
+	//choose rock, paper, scissors
+	//roll dice for computer
+		
+function playRockPaperScissors(rockPaperScissors){
+	rockPaperScissors = prompt("Rock, paper, or scissors?");
+	rockPaperScissors = rockPaperScissors.toLowerCase();
+	rollDice(3)  //1 = rock, 2 = paper, 3 = scissors
+		if (rockPaperScissors === "rock"){
+			console.log(rockPaperScissors)
+		}
+		else if (rockPaperScissors === "paper"){
+			console.log(rockPaperScissors)
+		}
+		else if (rockPaperScissors === "scissors"){
+			console.log(rockPaperScissors)
+		}
+		else{
+			alert("You didn't enter something correctly.  Try again")
+			return playRockPaperScissors()
+		}
+}
+
+
+
+
 function runGame(game){
-	console.log(rollDice(20))
+	playRockPaperScissors()
 }
 
 runGame();
