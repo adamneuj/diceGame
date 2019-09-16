@@ -18,14 +18,14 @@ function rollDice(maxSides){
 	return Math.floor(Math.random() * maxSides) + 1;
 }
 
-// function pickDice(dice){
-// 	let fourSide = 1
-// 	let sixSide = 2
-// 	let eightSide = 4
-// 	let tenSide = 8
-// 	let twelveSide = 16
-// 	let twentySide = 20
-// }
+function pickDice(dice){
+	let fourSide = rollDice(4) * 1
+	let sixSide = rollDice(6) * 2
+	let eightSide = rollDice(8) *4
+	let tenSide = rollDice(10) *8
+	let twelveSide = rollDice(12) * 16
+	let twentySide = rollDice(20) * 32
+}
 
 
 function playRockPaperScissors(rockPaperScissors){
@@ -39,9 +39,11 @@ function playRockPaperScissors(rockPaperScissors){
 			}
 			else if(computerTurn === 2){
 				alert("The computer picked paper.  You lost.  Try again.");
+				attempts--
 			}
 			else if(computerTurn === 3){
 				alert("The computer picked scissors.  You won!");
+				attempts--
 			}
 		}
 		else if (rockPaperScissors === "paper"){
@@ -76,10 +78,10 @@ function playRockPaperScissors(rockPaperScissors){
 
 
 function runGame(game){
-	let attempts = 10
-	let score = 0
+	let attempts = 10;
+	let score = 0;
 	while(attempts !== 0){
-		attempts--
+		playRockPaperScissors();
 	}
 	console.log("End")
 }
