@@ -73,12 +73,14 @@ function playRockPaperScissors(rockPaperScissors){
 			else if(computerTurn === 3){
 				alert("The computer picked scissors.  You won!");
 				attempts--
+				score = score + dice
 			}
 		}
 		else if (rockPaperScissors === "paper"){
 			if (computerTurn === 1){
 				alert("The computer picked rock.  You won!");
 				attempts--
+				score = score + dice
 			}
 			else if(computerTurn === 2){
 				alert("The computer picked paper.  Try again.");
@@ -97,6 +99,7 @@ function playRockPaperScissors(rockPaperScissors){
 			else if(computerTurn === 2){
 				alert("The computer picked paper.  You won!");
 				attempts--
+				score = score + dice
 			}
 			else if(computerTurn === 3){
 				alert("The computer picked scissors.  Iry again.");
@@ -113,10 +116,9 @@ function playRockPaperScissors(rockPaperScissors){
 function runGame(game){
 	let attempts = 10;
 	let score = 0;
-	pickDice();
-	// while(attempts !== 0){
-	// 	playRockPaperScissors();
-	// }
+	while(attempts !== 0 && score < 1000){
+		pickDice();
+	}
 	console.log("End")
 }
 
