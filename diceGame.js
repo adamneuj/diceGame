@@ -28,7 +28,7 @@ function rollDice(maxSides){
 function playRockPaperScissors(rockPaperScissors){
 	rockPaperScissors = prompt("Rock, paper, or scissors?");
 	rockPaperScissors = rockPaperScissors.toLowerCase();
-	rollDice(3)  //1 = rock, 2 = paper, 3 = scissors
+	let computerTurn = rollDice(3)  //1 = rock, 2 = paper, 3 = scissors
 		if (rockPaperScissors === "rock"){
 			console.log(rockPaperScissors)
 		}
