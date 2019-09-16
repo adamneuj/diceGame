@@ -18,10 +18,14 @@ function rollDice(maxSides){
 	return Math.floor(Math.random() * maxSides) + 1;
 }
 
-
-//rock, paper, scissors function
-	//choose rock, paper, scissors
-	//roll dice for computer
+// function pickDice(dice){
+// 	let fourSide = 1
+// 	let sixSide = 2
+// 	let eightSide = 4
+// 	let tenSide = 8
+// 	let twelveSide = 16
+// 	let twentySide = 20
+// }
 
 
 function playRockPaperScissors(rockPaperScissors){
@@ -37,7 +41,7 @@ function playRockPaperScissors(rockPaperScissors){
 				alert("The computer picked paper.  You lost.  Try again.");
 			}
 			else if(computerTurn === 3){
-				alert("The computer picked scissors.  You won!")	;
+				alert("The computer picked scissors.  You won!");
 			}
 		}
 		else if (rockPaperScissors === "paper"){
@@ -54,25 +58,30 @@ function playRockPaperScissors(rockPaperScissors){
 		}
 		else if (rockPaperScissors === "scissors"){
 			if (computerTurn === 1){
-				alert("The computer picked rock.  You lost.  Try again.")
+				alert("The computer picked rock.  You lost.  Try again.");
 			}
 			else if(computerTurn === 2){
-				alert("The computer picked paper.  You won!")
+				alert("The computer picked paper.  You won!");
 			}
 			else if(computerTurn === 3){
-				alert("The computer picked scissors.  Iry again.")
+				alert("The computer picked scissors.  Iry again.");
 				return playRockPaperScissors();
 			}
 		}
 		else{
-			alert("You didn't enter something correctly.  Try again")
+			alert("You didn't enter something correctly.  Try again");
 			return playRockPaperScissors()
 		}
 }
 
 
 function runGame(game){
-	playRockPaperScissors()
+	let attempts = 10
+	let score = 0
+	while(attempts !== 0){
+		attempts--
+	}
+	console.log("End")
 }
 
 runGame();
