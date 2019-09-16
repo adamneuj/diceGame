@@ -1,7 +1,5 @@
 "use strict";
 
-
-
 function displayRules(rules){
 	console.log ("Welcome to the Dice Game!  These are the rules as follows:");
 	console.log ("Your goal is to try to get 1000 points in ten attempts.");
@@ -24,27 +22,53 @@ function rollDice(maxSides){
 //rock, paper, scissors function
 	//choose rock, paper, scissors
 	//roll dice for computer
-		
+
+
 function playRockPaperScissors(rockPaperScissors){
 	rockPaperScissors = prompt("Rock, paper, or scissors?");
 	rockPaperScissors = rockPaperScissors.toLowerCase();
-	let computerTurn = rollDice(3)  //1 = rock, 2 = paper, 3 = scissors
+	let computerTurn = rollDice(3);  //1 = rock, 2 = paper, 3 = scissors
 		if (rockPaperScissors === "rock"){
-			console.log(rockPaperScissors)
+			if (computerTurn === 1){
+				alert("The computer picked rock.  Try again.");
+				return playRockPaperScissors();
+			}
+			else if(computerTurn === 2){
+				alert("The computer picked paper.  You lost.  Try again.");
+			}
+			else if(computerTurn === 3){
+				alert("The computer picked scissors.  You won!")	;
+			}
 		}
 		else if (rockPaperScissors === "paper"){
-			console.log(rockPaperScissors)
+			if (computerTurn === 1){
+				alert("The computer picked rock.  You won!");
+			}
+			else if(computerTurn === 2){
+				alert("The computer picked paper.  Try again.");
+				return playRockPaperScissors();
+			}
+			else if(computerTurn === 3){
+				alert("The computer picked scissors.  You lost.  Try again.");
+			}
 		}
 		else if (rockPaperScissors === "scissors"){
-			console.log(rockPaperScissors)
+			if (computerTurn === 1){
+				alert("The computer picked rock.  You lost.  Try again.")
+			}
+			else if(computerTurn === 2){
+				alert("The computer picked paper.  You won!")
+			}
+			else if(computerTurn === 3){
+				alert("The computer picked scissors.  Iry again.")
+				return playRockPaperScissors();
+			}
 		}
 		else{
 			alert("You didn't enter something correctly.  Try again")
 			return playRockPaperScissors()
 		}
 }
-
-
 
 
 function runGame(game){
