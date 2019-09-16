@@ -25,37 +25,37 @@ function pickDice(dice){
 	let twelveSide = rollDice(12) * 16;
 	let twentySide = rollDice(20) * 32;
 	alert("Type a number of sides you want from the following options:");
-	let diceScore = prompt("4-Sided x 1 multiplier  |  6-Sided x 2 multiplier  |  8-Sided x 4 multiplier  |  10-Sided x 8 multiplier  | 12-Sided x 16 multiplier  |  20-Sided x 32 multiplier");
-		if(diceScore === 4){
-			diceScore = fourSide;
-			return diceScore;
+	dice = prompt("4-Sided x 1 multiplier  |  6-Sided x 2 multiplier  |  8-Sided x 4 multiplier  |  10-Sided x 8 multiplier  | 12-Sided x 16 multiplier  |  20-Sided x 32 multiplier");
+	dice = parseInt(dice, 10)
+		if(dice === 4){
+			dice = fourSide;
+			return dice;
 		}
-		else if (diceScore === 6){
-			diceScore = sixSide;
-			return diceScore;
+		else if (dice === 6){
+			dice = sixSide;
+			return dice;
 		}
-		else if (diceScore === 8){
-			diceScore = eightSide;
-			return diceScore;
+		else if (dice === 8){
+			dice = eightSide;
+			return dice;
 		}
-		else if (diceScore === 10){
-			diceScore = tenSide;
-			return diceScore;
+		else if (dice === 10){
+			dice = tenSide;
+			return dice;
 		}
-		else if (diceScore === 12){
-			diceScore = twelveSide;
-			return diceScore;
+		else if (dice === 12){
+			dice = twelveSide;
+			return dice;
 		}
-		else if (diceInt === 20){
-			diceScore = twentySide;
-			return diceScore;
+		else if (dice === 20){
+			dice = twentySide;
+			return dice;
 		}
 		else{
 			alert("Incorrect input.  Try again.")
 			return pickDice()
 		}
 }
-
 
 function playRockPaperScissors(rockPaperScissors){
 	rockPaperScissors = prompt("Rock, paper, or scissors?");
