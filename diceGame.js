@@ -1,5 +1,7 @@
 "use strict";
 
+
+
 function displayRules(rules){
 	console.log ("Welcome to the Dice Game!  These are the rules as follows:");
 	console.log ("Your goal is to try to get 1000 points in ten attempts.");
@@ -24,13 +26,16 @@ function playRockPaperScissors(rockPaperScissors){
 
 
 
-function rollDice(dice){
-
+function rollDice(maxSides){
+	return Math.floor(Math.random() * maxSides) + 1;
 }
 
+
 function runGame(game){
-	playRockPaperScissors();
+	console.log(rollDice(20))
 }
 
 runGame();
+
+
 
