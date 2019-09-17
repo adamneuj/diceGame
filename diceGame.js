@@ -75,21 +75,21 @@ function runGame(game){
 				}
 				else if(computerTurn === 2){
 					alert("They chose paper.  You chose rock.  You lost this round.");
-					attempts--
+					attempts--;
 					alert("Your score is " + score +".  Attempts left: " + attempts);
 				}
 				else if(computerTurn === 3){
 					alert("They chose scissors.  You chose rock.  You won this round!");
-					attempts--
-					score = score + diceScore
+					attempts--;
+					score = score + diceScore;
 					alert("Your score is " + score +".  Attempts left: " + attempts);
 				}
 			}
 			else if (rockPaperScissors === "paper"){
 				if (computerTurn === 1){
 					alert("They chose rock.  You chose paper.  You won this round!");
-					attempts--
-					score = score + diceScore
+					attempts--;
+					score = score + diceScore;
 					alert("Your score is " + score +".  Attempts left: " + attempts);
 				}
 				else if(computerTurn === 2){
@@ -99,20 +99,20 @@ function runGame(game){
 				}
 				else if(computerTurn === 3){
 					alert("They chose scissors.  You chose paper.  You lost this round.");
-					attempts--
+					attempts--;
 					alert("Your score is " + score +".  Attempts left: " + attempts);
 				}
 			}
 			else if (rockPaperScissors === "scissors"){
 				if (computerTurn === 1){
 					alert("They chose rock.  You chose scissors.  You lost this round.");
-					attempts--
+					attempts--;
 					alert("Your score is " + score +".  Attempts left: " + attempts);
 				}
 				else if(computerTurn === 2){
 					alert("They chose paper.  You chose scissors.  You won this round!");
-					attempts--
-					score = score + diceScore
+					attempts--;
+					score = score + diceScore;
 					alert("Your score is " + score +".  Attempts left: " + attempts);
 				}
 				else if(computerTurn === 3){
@@ -123,7 +123,7 @@ function runGame(game){
 			}
 			else{
 				alert("You didn't enter something correctly.  Try again");
-				return playRockPaperScissors()
+				return playRockPaperScissors();
 			}
 	}
 
@@ -139,7 +139,7 @@ function runGame(game){
 			}
 	}
 
-	function playGame(gameplayLoop){
+	function startGameplayLoop(gameplayLoop){
 		while(attempts !== 0){
 			if(score === 1000){
 				alert("You won!  Congratulations!");
@@ -158,11 +158,8 @@ function runGame(game){
 
 	// Below is the code to call each function to run the game.
 	displayRules();
-	playGame();
-	alert("You have lost.");
-	score = 0;
-	attempts = 10;
-	return score;
+	startGameplayLoop();
+	return alert("You have lost.");
 }
 
 runGame();
