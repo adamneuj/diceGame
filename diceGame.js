@@ -128,37 +128,41 @@ function runGame(game){
 	}
 
 	function redeemYourScore(redemptionRound){
-			attempts = 2
-			while(attempts !== 0){
+		alert("Your score is more than 1000.");
+		alert("The dice will now reduce your score.");
+		alert("You have two more attempts to reduce the score.");
+		attempts = 2
+		while(attempts !== 0){
+			pickDice();
+			diceScore *= -1; //makes this a negative integer
+			playRockPaperScissors();
+			}
+	}
+
+	function playGame(gameplayLoop){
+		while(attempts !== 0){
+			if(score === 1000){
+				alert("You won!  Congratulations!");
+				score = 0;
+				return score;
+			}
+			else if(score < 1000){
 				pickDice();
-				diceScore *= -1; //makes this a negative integer
 				playRockPaperScissors();
 			}
+			else if(score > 1000){
+				redeemYourScore();
+			}
+		}
 	}
 
 	// Below is the code to call each function to run the game.
 	displayRules();
-	while(attempts !== 0){
-		if(score === 1000){
-			alert("You won!  Congratulations!");
-			score = 0;
-			return score;
-		}
-		else if(score > 1000){
-			alert("Your score is more than 1000.");
-			alert("The dice will now reduce your score.");
-			alert("You have two more attempts to reduce the score.");
-			redeemYourScore();
-		}
-		else if(score < 1000){
-		pickDice();
-		playRockPaperScissors();
-		}
-	}
-	alert("You have lost.")
-	score = 0
-	attempts = 10
-	return score
+	playGame();
+	alert("You have lost.");
+	score = 0;
+	attempts = 10;
+	return score;
 }
 
 runGame();
