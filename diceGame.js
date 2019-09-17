@@ -1,6 +1,5 @@
 "use strict";
 
-
 function runGame(game){
 	
 	let attempts = 10;
@@ -59,8 +58,8 @@ function runGame(game){
 				return diceScore;
 			}
 			else{
-				alert("Incorrect input.  Try again.")
-				return pickDice()
+				alert("Incorrect input.  Try again.");
+				return pickDice();
 			}
 	}
 
@@ -118,13 +117,22 @@ function runGame(game){
 				}
 				else if(computerTurn === 3){
 					alert("They chose scissors.  You chose scissors.  Try again.");
-					return playRockPaperScissors();
 					alert("Your score is " + score +".  Attempts left: " + attempts);
+					return playRockPaperScissors();
 				}
 			}
 			else{
 				alert("You didn't enter something correctly.  Try again");
 				return playRockPaperScissors()
+			}
+	}
+
+	function redeemPlay(redemptionScore){
+			attempts = 2
+			while(attempts !== 0){
+				pickDice();
+				diceScore *= -1; //makes this a negative integer
+				playRockPaperScissors();
 			}
 	}
 
@@ -136,9 +144,10 @@ function runGame(game){
 			return score;
 		}
 		else if(score > 1000){
-			alert("You have lost.  Try again.");
-			score = 0;
-			return score;
+			alert("Your score is more than 1000.");
+			alert("The dice will now reduce your score.");
+			alert("You have two more attempts to reduce the score.");
+			redeemPlay();
 		}
 		else if(score < 1000){
 		pickDice();
