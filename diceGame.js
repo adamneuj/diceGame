@@ -139,27 +139,33 @@ function runGame(game){
 			}
 	}
 
+
 	function startGameplayLoop(gameplayLoop){
-		while(attempts !== 0){
-			if(score === 1000){
-				alert("You won!  Congratulations!");
-				score = 0;
-				return score;
+		if(attempts !== 0){
+			while(attempts !== 0){
+				if(score === 1000){
+					alert("You won!  Congratulations!");
+					score = 0;
+					return score;
+				}
+				else if(score < 1000){
+					pickDice();
+					playRockPaperScissors();
+					return startGameplayLoop();
+				}
+				else if(score > 1000){
+					return redeemYourScore();
+				}
 			}
-			else if(score < 1000){
-				pickDice();
-				playRockPaperScissors();
-			}
-			else if(score > 1000){
-				redeemYourScore();
-			}
+		}
+		else if(attempts ===0){
+			return alert("You ran out of attempts.  You lose the game.")
 		}
 	}
 
 	// Below is the code to call each function to run the game.
 	displayRules();
 	startGameplayLoop();
-	return alert("You have lost.");
 }
 
 runGame();
