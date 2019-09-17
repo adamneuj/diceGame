@@ -127,7 +127,7 @@ function runGame(game){
 			}
 	}
 
-	function redeemPlay(redemptionScore){
+	function redeemYourScore(redemptionRound){
 			attempts = 2
 			while(attempts !== 0){
 				pickDice();
@@ -136,6 +136,7 @@ function runGame(game){
 			}
 	}
 
+	// Below is the code to call each function to run the game.
 	displayRules();
 	while(attempts !== 0){
 		if(score === 1000){
@@ -147,14 +148,14 @@ function runGame(game){
 			alert("Your score is more than 1000.");
 			alert("The dice will now reduce your score.");
 			alert("You have two more attempts to reduce the score.");
-			redeemPlay();
+			redeemYourScore();
 		}
 		else if(score < 1000){
 		pickDice();
 		playRockPaperScissors();
 		}
 	}
-	alert("You have run out of attempts and lost.  Try again.")
+	alert("You have lost.")
 	score = 0
 	attempts = 10
 	return score
