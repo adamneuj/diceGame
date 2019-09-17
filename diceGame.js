@@ -15,6 +15,7 @@ function displayRules(rules){
 
 
 function runGame(game){
+	
 	let attempts = 10;
 	let score = 0;
 	let diceScore = 0;
