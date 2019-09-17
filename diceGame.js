@@ -1,24 +1,24 @@
 "use strict";
 
-function displayRules(rules){
-	console.log ("Welcome to the Dice Game!  These are the rules as follows:");
-	console.log ("Your goal is to try to get 1000 points in ten attempts.");
-	console.log ("If you get to 1000 points, you win.");
-	console.log ("If you go over 1000 points, or if you run out of attempts, you will lose.");
-	console.log ("The only way to earn points is if you win a game of rock, paper, scissors.");
-	console.log ("Before you can play rock, paper, scissors you will need to pick a dice.");
-	console.log ("Each dice has a different multiplier, which will be laid out below.");
-	console.log ("If you win rock, paper, scissors then you will be able to receive points from the dice you've selected.");
-	console.log ("Remember, don't go over 1000.");
-	return console.log ("Good luck!");
-}
-
 
 function runGame(game){
 	
 	let attempts = 10;
 	let score = 0;
 	let diceScore = 0;
+
+	function displayRules(rules){
+		alert ("Welcome to the Dice Game!  These are the rules as follows:");
+		alert ("Your goal is to try to get 1000 points in ten attempts.");
+		alert ("If you get to 1000 points, you win.");
+		alert ("If you go over 1000 points, or if you run out of attempts, you will lose.");
+		alert ("The only way to earn points is if you win a game of rock, paper, scissors.");
+		alert ("Before you can play rock, paper, scissors you will need to pick a dice.");
+		alert ("Each dice has a different multiplier, which will be laid out below.");
+		alert ("If you win rock, paper, scissors then you will be able to receive points from the dice you've selected.");
+		alert ("Remember, don't go over 1000.");
+		return alert ("Good luck!");
+	}
 
 	function rollDice(maxSides){
 		return Math.floor(Math.random() * maxSides) + 1;
@@ -80,7 +80,7 @@ function runGame(game){
 					alert("Your score is " + score +".  Attempts left: " + attempts);
 				}
 				else if(computerTurn === 3){
-					alert("They chose scissors.  You won this round!");
+					alert("They chose scissors.  You chose rock.  You won this round!");
 					attempts--
 					score = score + diceScore
 					alert("Your score is " + score +".  Attempts left: " + attempts);
@@ -128,6 +128,7 @@ function runGame(game){
 			}
 	}
 
+	displayRules();
 	while(attempts !== 0){
 		if(score === 1000){
 			alert("You won!  Congratulations!");
@@ -135,13 +136,13 @@ function runGame(game){
 			return score;
 		}
 		else if(score > 1000){
-			alert("You've lost.  Try again.");
+			alert("You have lost.  Try again.");
 			score = 0;
 			return score;
 		}
 		else if(score < 1000){
 		pickDice();
-		playRockPaperScissors();			
+		playRockPaperScissors();
 		}
 	}
 	alert("You have run out of attempts and lost.  Try again.")
