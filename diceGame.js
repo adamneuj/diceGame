@@ -7,8 +7,6 @@ function runGame(game){
 	let attempts = 10;
 	let score = 0;
 	let diceScore = 0;
-	// Below is the code to call each function to run the game.
-	// displayRules();
 	startGameplayLoop();
 
 	function displayRules(rules){
@@ -35,30 +33,29 @@ function runGame(game){
 		let tenSide = rollDice(10) * 8;
 		let twelveSide = rollDice(12) * 16;
 		let twentySide = rollDice(20) * 32;
-		alert("Type a number of sides you want from the following options:");
-		diceScore = prompt("4-Sided x 1 multiplier  |  6-Sided x 2 multiplier  |  8-Sided x 4 multiplier  |  10-Sided x 8 multiplier  | 12-Sided x 16 multiplier  |  20-Sided x 32 multiplier");
+		diceScore = prompt("Pick a dice.\n[1] 4-Sided x 1 multiplier\n[2] 6-Sided x 2 multiplier\n[3] 8-Sided x 4 multiplier\n[4] 10-Sided x 8 multiplier\n[5] 12-Sided x 16 multiplier\n[6] 20-Sided x 32 multiplier");
 		diceScore = parseInt(diceScore, 10)
-			if(diceScore === 4){
+			if(diceScore === 1){
 				diceScore = fourSide;
 				return diceScore;
 			}
-			else if (diceScore === 6){
+			else if (diceScore === 2){
 				diceScore = sixSide;
 				return diceScore;
 			}
-			else if (diceScore === 8){
+			else if (diceScore === 3){
 				diceScore = eightSide;
 				return diceScore;
 			}
-			else if (diceScore === 10){
+			else if (diceScore === 4){
 				diceScore = tenSide;
 				return diceScore;
 			}
-			else if (diceScore === 12){
+			else if (diceScore === 5){
 				diceScore = twelveSide;
 				return diceScore;
 			}
-			else if (diceScore === 20){
+			else if (diceScore === 6){
 				diceScore = twentySide;
 				return diceScore;
 			}
