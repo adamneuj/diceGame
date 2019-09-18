@@ -7,12 +7,12 @@
     	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     	<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
     	<link rel="stylesheet" type="text/css" href="style.css">
-		<title>Dice Game</title>
+		<title>The diceGame</title>
 	</header>
 	<body>
 		<div class = "row">
 			<div class = "col-xl-12 titleBar">
-				<h1>Play the diceGame!</h1>
+				<h1>The diceGame</h1>
 			</div>
 		</div>
 		<div class = "row">
@@ -21,7 +21,28 @@
 			</div>
 		</div>
 		<div class = "row">
-			
+			<div class = "col-xl-12 winLoseConditions">
+				<p><strong>How to win the game:</strong>
+				<br>Hit 1000 points.</p>
+				<p><strong>How to lose the game:</strong>
+				<br>Go over 1000 points or run out of turns.</p>
+				<p><strong>How to play:</strong></p>
+			</div>
+		</div>
+		<div class = "row">
+			<div class = "col-xl-12 rules">
+					<p>Start by picking a dice.
+						<br>Each dice will give you potential points corresponding to their multiplier.
+						<br>For example: A 20-sided dice has a 32x multiplier giving you the potential of being able to get 640 points in one turn.
+						<br>After picking the dice, you will not earn any points yet.</p>
+					<p>Then you will play a game of rock, paper, scissors.
+						<br>If won, you will earn points to your score.
+						<br>If lost, you will earn no points and go back to picking a dice.
+						<br>If tied, you will play rock, paper, scissors again.</p>
+					<p>If you go over 1000 points, you will have 2 turns to bring the score back down to 1000.
+						<br>The game will be played the same except that the dice will take away from the score.</p>
+
+			</div>
 		</div>
 	</body>
 	<script src = "diceGame.js"></script>

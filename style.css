@@ -1,6 +1,11 @@
 body{
 	font-family: 'Playfair Display', serif;
 	background-color: #EEE5E9;
+	color: #383D3B;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 .titleBar{
@@ -9,7 +14,22 @@ body{
 }
 
 .rulesBar{
+	padding-top: 10px;
+	padding-bottom: 5px;
 	background-color: #383D3B;
 	color: #EEE5E9;
+	text-align: center;
+}
+
+.rules{
+	font-size: 18px;
+	background-color: #B6B8B7;
+	text-align: center;
+}
+
+.winLoseConditions{
+	font-size: 20px;
+	padding-top: 10px;
+	background-color: #B6B8B7;
 	text-align: center;
 }
