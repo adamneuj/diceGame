@@ -1,10 +1,15 @@
 "use strict";
 
+// runGame();
+
 function runGame(game){
 	
 	let attempts = 10;
 	let score = 0;
 	let diceScore = 0;
+	// Below is the code to call each function to run the game.
+	// displayRules();
+	startGameplayLoop();
 
 	function displayRules(rules){
 		alert ("Welcome to the Dice Game!  These are the rules as follows:");
@@ -173,10 +178,4 @@ function runGame(game){
 			return alert("You ran out of attempts.  You lose the game.")
 		}
 	}
-
-	// Below is the code to call each function to run the game.
-	displayRules();
-	startGameplayLoop();
 }
-
-// runGame();
