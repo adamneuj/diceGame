@@ -33,7 +33,7 @@ function runGame(game){
 		let tenSide = rollDice(10) * 8;
 		let twelveSide = rollDice(12) * 16;
 		let twentySide = rollDice(20) * 32;
-		diceScore = prompt("Pick a dice.\n[1] 4-Sided x 1 multiplier\n[2] 6-Sided x 2 multiplier\n[3] 8-Sided x 4 multiplier\n[4] 10-Sided x 8 multiplier\n[5] 12-Sided x 16 multiplier\n[6] 20-Sided x 32 multiplier");
+		diceScore = prompt("Score: " + score +"\nPick a dice.\n[1] 4-Sided x 1 multiplier\n[2] 6-Sided x 2 multiplier\n[3] 8-Sided x 4 multiplier\n[4] 10-Sided x 8 multiplier\n[5] 12-Sided x 16 multiplier\n[6] 20-Sided x 32 multiplier");
 		diceScore = parseInt(diceScore, 10)
 			if(diceScore === 1){
 				diceScore = fourSide;
