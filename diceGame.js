@@ -64,62 +64,62 @@ function runGame(game){
 				return pickDice();
 			}
 	}
-
+	// 1 = rock, 2 = paper, 3 = scissors
 	function playRockPaperScissors(rockPaperScissors){
-		rockPaperScissors = prompt("Rock, paper, or scissors?");
-		rockPaperScissors = rockPaperScissors.toLowerCase();
-		let computerTurn = rollDice(3);  // 1 = rock, 2 = paper, 3 = scissors
-			if (rockPaperScissors === "rock"){
+		rockPaperScissors = prompt("Play rock, paper scissors to score points.\n[1] Rock\n[2] Paper\n[3] Scissors");
+		rockPaperScissors = parseInt(rockPaperScissors, 10)
+		let computerTurn = rollDice(3);  
+			if (rockPaperScissors === 1){
 				if (computerTurn === 1){
 					alert("They chose rock.  You chose rock.  Try again.");
-					alert("Your score is " + score +".  Attempts left: " + attempts);
+					alert("Your score is " + score +".\nAttempts left: " + attempts);
 					return playRockPaperScissors();
 				}
 				else if(computerTurn === 2){
 					alert("They chose paper.  You chose rock.  You lost this round.");
 					attempts--;
-					alert("Your score is " + score +".  Attempts left: " + attempts);
+					alert("Your score is " + score +".\nAttempts left: " + attempts);
 				}
 				else if(computerTurn === 3){
 					alert("They chose scissors.  You chose rock.  You won this round!");
 					attempts--;
 					score = score + diceScore;
-					alert("Your score is " + score +".  Attempts left: " + attempts);
+					alert("Your score is " + score +".\nAttempts left: " + attempts);
 				}
 			}
-			else if (rockPaperScissors === "paper"){
+			else if (rockPaperScissors === 2){
 				if (computerTurn === 1){
 					alert("They chose rock.  You chose paper.  You won this round!");
 					attempts--;
 					score = score + diceScore;
-					alert("Your score is " + score +".  Attempts left: " + attempts);
+					alert("Your score is " + score +".\nAttempts left: " + attempts);
 				}
 				else if(computerTurn === 2){
 					alert("They chose paper.  You chose paper.  Try again.");
-					alert("Your score is " + score +".  Attempts left: " + attempts);
+					alert("Your score is " + score +".\nAttempts left: " + attempts);
 					return playRockPaperScissors();
 				}
 				else if(computerTurn === 3){
 					alert("They chose scissors.  You chose paper.  You lost this round.");
 					attempts--;
-					alert("Your score is " + score +".  Attempts left: " + attempts);
+					alert("Your score is " + score +".\nAttempts left: " + attempts);
 				}
 			}
-			else if (rockPaperScissors === "scissors"){
+			else if (rockPaperScissors === 3){
 				if (computerTurn === 1){
 					alert("They chose rock.  You chose scissors.  You lost this round.");
 					attempts--;
-					alert("Your score is " + score +".  Attempts left: " + attempts);
+					alert("Your score is " + score +".\nAttempts left: " + attempts);
 				}
 				else if(computerTurn === 2){
 					alert("They chose paper.  You chose scissors.  You won this round!");
 					attempts--;
 					score = score + diceScore;
-					alert("Your score is " + score +".  Attempts left: " + attempts);
+					alert("Your score is " + score +".\nAttempts left: " + attempts);
 				}
 				else if(computerTurn === 3){
 					alert("They chose scissors.  You chose scissors.  Try again.");
-					alert("Your score is " + score +".  Attempts left: " + attempts);
+					alert("Your score is " + score +".\nAttempts left: " + attempts);
 					return playRockPaperScissors();
 				}
 			}
