@@ -1,3 +1,8 @@
 body{
 	font-family: 'Playfair Display', serif;
 }
+
+.titleBar{
+	background-color: #5C8F97;
+	text-align: center;
+}

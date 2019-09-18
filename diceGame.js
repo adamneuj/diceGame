@@ -179,4 +179,4 @@ function runGame(game){
 	startGameplayLoop();
 }
 
-runGame();
+// runGame();
