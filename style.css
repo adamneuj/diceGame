@@ -1,8 +1,15 @@
 body{
 	font-family: 'Playfair Display', serif;
+	background-color: #EEE5E9;
 }
 
 .titleBar{
 	background-color: #5C8F97;
+	text-align: center;
+}
+
+.rulesBar{
+	background-color: #383D3B;
+	color: #EEE5E9;
 	text-align: center;
 }
